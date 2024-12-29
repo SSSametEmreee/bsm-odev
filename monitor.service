@@ -1,0 +1,12 @@
+[Unit]
+Description=BSM Directory Monitor Service
+After=network.target
+
+[Service]
+User=sametyaz
+WorkingDirectory=/home/sametyaz/bsm
+ExecStart=/usr/bin/python3 /home/sametyaz/bsm/monitor.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
